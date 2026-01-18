@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SmartFall - AI-Powered Fall Detection System
 
 A cutting-edge, real-time fall detection system powered by YOLOv8 technology designed for elderly care and personal safety monitoring.
