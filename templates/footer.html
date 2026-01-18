@@ -1,0 +1,67 @@
+
+ <!-- FOOTER -->
+    <footer style="margin-top:60px;">
+    <div class="footer-container"
+         style="grid-template-columns:1fr; text-align:center; padding-bottom:28px; border-bottom:none;">
+
+        <!-- Logo + Title -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <img src="/static/fall_logo.png"
+                 alt="SmartFall"
+                 style="width:52px; height:52px; border-radius:50%;
+                        background:rgba(255,255,255,0.12); padding:6px;">
+
+            <h3 style="font-size:1.45rem; font-weight:700; margin:0;">
+                SmartFall
+            </h3>
+
+            <p style="max-width:520px; font-size:0.95rem; opacity:0.9; margin-top:4px;">
+                Advanced AI-powered fall detection system for elderly care and safety monitoring.
+            </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div style="margin-top:22px; display:flex; justify-content:center;
+                    gap:26px; flex-wrap:wrap; font-size:0.95rem;">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('upload_page') }}">Upload</a>
+            <a href="{{ url_for('analytics') }}">Analytics</a>
+            <a href="{{ url_for('dashboard') if session.get('user') else url_for('login') }}">Dashboard</a>
+            <a href="{{ url_for('live') }}">Live Monitor</a>
+            <a href="{{ url_for('contact_page') if session.get('user') else url_for('login') }}">Contact</a>
+        </div>
+
+        <!-- Icons -->
+        <div style="margin-top:22px; display:flex; justify-content:center; gap:16px;">
+            <a href="mailto:25workproject123@gmail.com"
+               style="width:42px; height:42px; border-radius:50%;
+                      background:rgba(255,255,255,0.15);
+                      display:flex; align-items:center; justify-content:center;">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="https://www.instagram.com/detection_960" target="_blank"
+               style="width:42px; height:42px; border-radius:50%;
+                      background:rgba(255,255,255,0.15);
+                      display:flex; align-items:center; justify-content:center;">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@pro-267z" target="_blank"
+               style="width:42px; height:42px; border-radius:50%;
+                      background:rgba(255,255,255,0.15);
+                      display:flex; align-items:center; justify-content:center;">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Single invisible divider -->
+    <div style="max-width:1200px; margin:22px auto 0;
+                border-top:1px solid rgba(255,255,255,0.12);"></div>
+
+    <div class="footer-bottom">
+        © 2025 SmartFall. All rights reserved.
+    </div>
+</footer>
