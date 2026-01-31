@@ -18,9 +18,13 @@
                 opacity: 0.9;
             }
             .footer-container {
-                max-width: 1200px;
+                max-width: 1400px;
                 margin: 0 auto;
-                text-align: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 3rem;
+                padding-bottom: 40px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
             .footer-container img {
                 width: 52px;
@@ -30,57 +34,93 @@
                 padding: 6px;
             }
             .footer-container h3 {
-                font-size: 2rem;
+                font-size: 1.45rem;
                 font-weight: 700;
-                margin: 18px 0 10px;
+                margin: 0;
             }
             .footer-container p {
-                max-width: 520px;
-                margin: auto;
-                font-size: 1.15rem;
+                max-width: 200px;
+                margin: 4px auto 0;
+                font-size: 0.85rem;
                 opacity: 0.9;
-                margin-bottom: 32px;
             }
             .footer-container a {
                 color: white;
                 text-decoration: none;
-                font-size: 1.15rem;
-                margin: 0 18px;
+                font-size: 0.95rem;
                 transition: opacity 0.3s ease;
+                display: block;
             }
             .footer-container a:hover {
                 opacity: 0.8;
             }
             .footer-container .footer-icons a {
-                width: 56px;
-                height: 56px;
+                width: 42px;
+                height: 42px;
                 border-radius: 50%;
-                background: rgba(255,255,255,0.12);
-                display: flex;
+                background: rgba(255,255,255,0.15);
+                display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 color: white;
-                font-size: 2rem;
-                margin: 0 12px;
+                font-size: 1rem;
+                margin: 0 6px;
                 transition: background 0.3s, transform 0.3s;
             }
             .footer-container .footer-icons a:hover {
                 background: rgba(255,255,255,0.2);
                 transform: translateY(-3px);
             }
+            @media (max-width: 1024px) {
+                .footer-container {
+                    gap: 2rem;
+                }
+            }
             @media (max-width: 768px) {
                 footer {
                     padding: 40px 20px 20px;
                 }
+                .footer-container {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                    padding-bottom: 30px;
+                }
                 .footer-container a {
-                    font-size: 1rem;
-                    margin: 0 10px;
+                    font-size: 0.9rem;
+                }
+                .footer-container p {
+                    font-size: 0.8rem;
                 }
                 .footer-container .footer-icons a {
-                    width: 44px;
-                    height: 44px;
-                    font-size: 1.4rem;
-                    margin: 0 7px;
+                    width: 38px;
+                    height: 38px;
+                    font-size: 0.9rem;
+                    margin: 0 5px;
+                }
+            }
+            @media (max-width: 480px) {
+                footer {
+                    padding: 30px 15px 15px;
+                }
+                .footer-container {
+                    gap: 1.5rem;
+                    padding-bottom: 20px;
+                }
+                .footer-container h3 {
+                    font-size: 1.2rem;
+                }
+                .footer-container img {
+                    width: 45px;
+                    height: 45px;
+                }
+                .footer-container a {
+                    font-size: 0.85rem;
+                }
+                .footer-container .footer-icons a {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 0.8rem;
+                    margin: 0 3px;
                 }
             }
             </style>
