@@ -647,7 +647,7 @@
             <!-- HERO SLIDESHOW -->
             <div class="hero-image">
                 <img class="slide active"
-                    src="https://hikvision.az/wp-content/uploads/2024/01/radar-sensors-_media4.jpg"
+                    src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/791d/4346101/2c07ca61a577/IJTA2015-576364.006.jpg"
                     alt="Fall detection radar sensors">
                 <img class="slide"
                     src="https://site-media.latticeworkinc.com/site/assets/files/1249/banner-senior-fall.1120x630.webp"
@@ -713,12 +713,21 @@
     document.getElementById('learnMoreBtn').addEventListener('click', function() {
         const featuresSection = document.getElementById('featuresSection');
         featuresSection.classList.toggle('show');
-        
+
         // Smooth scroll to features section
         setTimeout(() => {
             featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
     });
+
+    // Hero image slideshow
+    const slides = document.querySelectorAll('.hero-image .slide');
+    let current = 0;
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, 3000);
 </script>
 
 </body>

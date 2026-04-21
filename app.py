@@ -213,6 +213,16 @@ def fall_callback(event_type, info, user_email=None):
 def index():
     return redirect(url_for('home'))
 
+# --- Browser favicon (avoids /favicon.ico 404) ---
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory('static', 'fall_icon.png', mimetype='image/png')
+
+# --- Chrome DevTools probe (avoid harmless .well-known 404 noise) ---
+@app.route('/.well-known/appspecific/com.chrome.devtools.json')
+def chrome_devtools_probe():
+    return Response(status=204)
+
 # --- HOME ---
 @app.route('/home')
 def home():

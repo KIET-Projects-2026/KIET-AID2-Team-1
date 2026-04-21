@@ -74,5 +74,9 @@ instance/
 .pytest_cache/
 htmlcov/
 
+# Documentation artifacts
+*.pdf
+*.docx
+
 # Node modules (if any frontend build tools)
 node_modules/

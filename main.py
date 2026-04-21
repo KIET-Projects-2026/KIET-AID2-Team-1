@@ -21,8 +21,10 @@ torch.load = patched_load
 # -----------------------------
 # Load YOLO model and classes
 # -----------------------------
-MODEL_PATH = 'yolov8s.pt'
-CLASSES_PATH = 'classes.txt'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, 'yolov8s.pt')
+CLASSES_PATH = os.path.join(BASE_DIR, 'classes.txt')
+
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"Model file not found: {MODEL_PATH}")
